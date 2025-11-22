@@ -1,0 +1,30 @@
+### CREATE COURSE
+POST {{baseUrl}}/course/create
+Content-Type: application/json
+
+{ 
+   "title": "Python Programming Bootcamp",
+    "subtitle": "From Beginner to Advanced Python Developer",
+    "level": "Beginner",
+    "rating": 4.3,
+    "totalReviews": 50,
+    "totalHours": "65 HRS",
+    "studentsEnrolled": 170,
+    "description": "Learn Python programming, data structures, algorithms and build real projects",
+    "skills": ["Python","OOPs","Data Structures","Algorithms","Flask","Django","REST APIs"],
+    "requirements": ["Laptop Required","Basic knowledge of programming"],
+    "instructor": {"name":"Rahul Sharma","designation":"Software Engineer","experience":"7 Years","bio":"Python developer and trainer"},
+    "reviews":[
+      {"userName":"Deepak Yadav","rating":4.5,"comment":"Very structured course."},
+      {"userName":"Neha Gupta","rating":4,"comment":"Good for beginners."}
+    ],
+    "curriculum":[
+      {"moduleTitle":"Python Basics","lessons":[{"title":"Variables & Data Types","duration":"20m"},{"title":"Control Flow","duration":"25m"}]},
+      {"moduleTitle":"Advanced Python","lessons":[{"title":"OOP Concepts","duration":"35m"},{"title":"File Handling","duration":"30m"}]}
+    ]
+  
+}
+
+### get course
+GET {{baseUrl}}/course?page=1&limit=5
+Content-Type: application/json
